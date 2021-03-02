@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@id/titlesFragment">
+
+    <fragment
+        android:id="@+id/titlesFragment"
+        android:name="com.makhabatusen.lesson2.ui.titles.FilmTitlesFragment"
+        android:label="fragment_titles"
+        tools:layout="@layout/fragment_titles">
+        <action
+            android:id="@+id/action_titlesFragment_to_filmDetailsFragment"
+            app:destination="@id/filmDetailsFragment">
+            <argument
+                android:name="id"
+                app:argType="string" />
+        </action>
+    </fragment>
+
+    <fragment
+        android:id="@+id/filmDetailsFragment"
+        android:name="com.makhabatusen.lesson2.ui.details.FilmDetailsFragment"
+        android:label="fragment_film_details"
+        tools:layout="@layout/fragment_film_details">
+        <argument
+            android:name="id"
+            app:argType="string" />
+    </fragment>
+</navigation>
