@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:padding="20dp"
+    android:padding="10dp"
     tools:context=".ui.details.FilmDetailsFragment">
 
     <TextView
@@ -44,11 +44,44 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_marginTop="10dp"
+        android:layout_marginBottom="20dp"
         android:textSize="16sp"
         android:textStyle="italic"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tv_director" />
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="90"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_release_date">
 
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_people"
+            style="@style/ButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="30"
+            android:text="@string/people" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_species"
+            style="@style/ButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="30"
+            android:text="@string/species" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_locations"
+            style="@style/ButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="30"
+            android:text="@string/locations" />
+
+    </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -32,7 +32,6 @@ public class FilmTitlesFragment extends Fragment {
         super.onCreate(savedInstanceState);
         initAdapter();
         getFilms();
-
     }
 
     private void initAdapter() {

@@ -1,6 +1,7 @@
 package com.makhabatusen.lesson2.data;
 
 import com.makhabatusen.lesson2.model.Film;
+import com.makhabatusen.lesson2.model.Person;
 
 import java.util.List;
 
@@ -15,5 +16,8 @@ public interface GhibliApi {
 
     @GET ("films")
     Call <List<Film>> getFilms();
+
+    @GET("films/{id}/people")
+    Call <List<Person>> getPeople(@Path("id") String id);
 
 }

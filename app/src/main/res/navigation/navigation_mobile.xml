@@ -27,5 +27,23 @@
         <argument
             android:name="id"
             app:argType="string" />
+        <action
+            android:id="@+id/action_filmDetailsFragment_to_peopleFragment"
+            app:destination="@id/peopleFragment">
+            <argument
+                android:name="film"
+                app:argType="com.makhabatusen.lesson2.model.Film"
+                app:nullable="true" />
+        </action>
+    </fragment>
+    <fragment
+        android:id="@+id/peopleFragment"
+        android:name="com.makhabatusen.lesson2.ui.details.people.PeopleFragment"
+        android:label="fragment_people"
+        tools:layout="@layout/fragment_people" >
+        <argument
+            android:name="film"
+            app:argType="com.makhabatusen.lesson2.model.Film"
+            app:nullable="true" />
     </fragment>
 </navigation>
