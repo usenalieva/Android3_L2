@@ -43,7 +43,6 @@ public class FilmTitlesFragment extends Fragment {
             @Override
             public void onSuccessList(List<Film> films) {
                 adapter.addFilms(films);
-                Log.e("ololo", films.toString());
             }
 
             @Override

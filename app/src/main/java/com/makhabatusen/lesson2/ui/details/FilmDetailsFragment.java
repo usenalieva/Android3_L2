@@ -28,16 +28,12 @@ public class FilmDetailsFragment extends Fragment {
     private TextView tvReleaseDate;
     private NavController navController;
 
-    private MaterialButton btnSpecies;
-    private MaterialButton btnLocations;
-
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         return inflater.inflate(R.layout.fragment_film_details, container, false);
     }
 
-    @SuppressLint("SetTextI18n")
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
@@ -71,9 +67,6 @@ public class FilmDetailsFragment extends Fragment {
         tvReleaseDate = view.findViewById(R.id.tv_release_date);
 
         navController = Navigation.findNavController(requireActivity(), R.id.nav_host_fragment);
-
-        btnSpecies = view.findViewById(R.id.btn_species);
-        btnLocations = view.findViewById(R.id.btn_locations);
 
         view.findViewById(R.id.btn_people).setOnClickListener(v->{
             navController.navigate(FilmDetailsFragmentDirections.actionFilmDetailsFragmentToPeopleFragment(retroFilm));

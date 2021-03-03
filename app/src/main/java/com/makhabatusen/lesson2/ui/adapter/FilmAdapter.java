@@ -1,6 +1,5 @@
 package com.makhabatusen.lesson2.ui.adapter;
 
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -23,11 +22,9 @@ public class FilmAdapter extends RecyclerView.Adapter<FilmAdapter.FilmHolder> {
 
 
     public FilmAdapter(AdapterInterface adapterInterface) {
-
         list = new ArrayList<>();
         this.adapterInterface = adapterInterface;
     }
-
 
     public void addFilms(List<Film> films) {
         list.addAll(films);
@@ -61,7 +58,6 @@ public class FilmAdapter extends RecyclerView.Adapter<FilmAdapter.FilmHolder> {
             super(itemView);
             tvTitle = itemView.findViewById(R.id.tv_title);
             itemView.setOnClickListener(v -> {
-                Log.e("ololo", "FilmHolder: " + list.get(getAdapterPosition()).getId());
                 adapterInterface.showDetails(list.get(getAdapterPosition()).getId());
             });
 
@@ -69,7 +65,6 @@ public class FilmAdapter extends RecyclerView.Adapter<FilmAdapter.FilmHolder> {
 
         public void bind(Film film) {
             tvTitle.setText(film.getTitle());
-            Log.e("ololo", "bind: " + tvTitle.getText().toString());
         }
     }
 }
