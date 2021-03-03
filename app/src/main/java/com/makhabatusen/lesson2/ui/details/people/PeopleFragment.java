@@ -41,7 +41,6 @@ public class PeopleFragment extends Fragment {
 
             }
         });
-
     }
 
     private void getFilm() {
@@ -60,7 +59,6 @@ public class PeopleFragment extends Fragment {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         init(view);
-
     }
 
     private void init(View view) {

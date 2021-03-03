@@ -72,6 +72,4 @@ public class FilmAdapter extends RecyclerView.Adapter<FilmAdapter.FilmHolder> {
             Log.e("ololo", "bind: " + tvTitle.getText().toString());
         }
     }
-
-
 }
