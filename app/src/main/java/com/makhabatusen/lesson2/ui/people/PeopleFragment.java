@@ -1,4 +1,4 @@
-package com.makhabatusen.lesson2.ui.details.people;
+package com.makhabatusen.lesson2.ui.people;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -8,13 +8,14 @@ import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.DividerItemDecoration;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.makhabatusen.lesson2.R;
 import com.makhabatusen.lesson2.data.PeopleStorage;
 import com.makhabatusen.lesson2.interfaces.ResultPeople;
 import com.makhabatusen.lesson2.model.Film;
-import com.makhabatusen.lesson2.ui.adapter.PersonAdapter;
+import com.makhabatusen.lesson2.ui.adapters.PersonAdapter;
 
 import java.util.List;
 
@@ -37,9 +38,7 @@ public class PeopleFragment extends Fragment {
             }
 
             @Override
-            public void OnFailure(String errorMsg) {
-
-            }
+            public void OnFailure(String errorMsg) { }
         });
     }
 
@@ -63,6 +62,7 @@ public class PeopleFragment extends Fragment {
 
     private void init(View view) {
         RecyclerView recyclerView = view.findViewById(R.id.rv_people);
+        recyclerView.addItemDecoration(new DividerItemDecoration(requireContext(), DividerItemDecoration.VERTICAL));
         adapter = new PersonAdapter();
         recyclerView.setAdapter(adapter);
 

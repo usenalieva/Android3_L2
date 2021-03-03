@@ -38,7 +38,7 @@
     </fragment>
     <fragment
         android:id="@+id/peopleFragment"
-        android:name="com.makhabatusen.lesson2.ui.details.people.PeopleFragment"
+        android:name="com.makhabatusen.lesson2.ui.people.PeopleFragment"
         android:label="fragment_people"
         tools:layout="@layout/fragment_people" >
         <argument

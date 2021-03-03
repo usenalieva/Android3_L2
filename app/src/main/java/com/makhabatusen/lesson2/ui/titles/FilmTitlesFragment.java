@@ -16,9 +16,9 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.makhabatusen.lesson2.R;
 import com.makhabatusen.lesson2.data.FilmStorage;
-import com.makhabatusen.lesson2.interfaces.ResultFilms;
+import com.makhabatusen.lesson2.interfaces.ResultListFilms;
 import com.makhabatusen.lesson2.model.Film;
-import com.makhabatusen.lesson2.ui.adapter.FilmAdapter;
+import com.makhabatusen.lesson2.ui.adapters.FilmAdapter;
 
 import java.util.List;
 
@@ -39,7 +39,7 @@ public class FilmTitlesFragment extends Fragment {
     }
 
     private void getFilms() {
-        FilmStorage.getFilms(new ResultFilms() {
+        FilmStorage.getFilms(new ResultListFilms() {
             @Override
             public void onSuccessList(List<Film> films) {
                 adapter.addFilms(films);

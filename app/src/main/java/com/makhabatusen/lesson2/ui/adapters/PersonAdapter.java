@@ -1,4 +1,4 @@
-package com.makhabatusen.lesson2.ui.adapter;
+package com.makhabatusen.lesson2.ui.adapters;
 
 import android.view.LayoutInflater;
 import android.view.View;

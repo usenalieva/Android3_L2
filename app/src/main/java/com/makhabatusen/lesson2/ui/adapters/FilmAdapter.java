@@ -1,4 +1,4 @@
-package com.makhabatusen.lesson2.ui.adapter;
+package com.makhabatusen.lesson2.ui.adapters;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -9,7 +9,7 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.makhabatusen.lesson2.R;
-import com.makhabatusen.lesson2.interfaces.AdapterInterface;
+import com.makhabatusen.lesson2.interfaces.DetailsInterface;
 import com.makhabatusen.lesson2.model.Film;
 
 import java.util.ArrayList;
@@ -18,10 +18,10 @@ import java.util.List;
 
 public class FilmAdapter extends RecyclerView.Adapter<FilmAdapter.FilmHolder> {
     private final List<Film> list;
-    public AdapterInterface adapterInterface;
+    public DetailsInterface adapterInterface;
 
 
-    public FilmAdapter(AdapterInterface adapterInterface) {
+    public FilmAdapter(DetailsInterface adapterInterface) {
         list = new ArrayList<>();
         this.adapterInterface = adapterInterface;
     }

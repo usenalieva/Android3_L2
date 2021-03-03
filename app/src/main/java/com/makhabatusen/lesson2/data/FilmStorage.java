@@ -2,7 +2,7 @@ package com.makhabatusen.lesson2.data;
 
 import com.makhabatusen.lesson2.model.Film;
 import com.makhabatusen.lesson2.interfaces.ResultFilm;
-import com.makhabatusen.lesson2.interfaces.ResultFilms;
+import com.makhabatusen.lesson2.interfaces.ResultListFilms;
 
 import java.util.List;
 
@@ -28,7 +28,7 @@ public class  FilmStorage {
         });
     }
 
-    public static void getFilms (ResultFilms result) {
+    public static void getFilms (ResultListFilms result) {
         RetrofitBuilder.getInstance().getFilms().enqueue(new Callback<List<Film>>() {
             @Override
             public void onResponse(Call<List<Film>> call, Response<List<Film>> response) {
